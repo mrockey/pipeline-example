@@ -1,0 +1,85 @@
+{
+    "streams": [
+        {
+            "stream": "products",
+            "schema": {
+                "properties": {
+                    "id": {"type": "integer"},
+                    "title": {"type": "string"},
+                    "price": {"type": "number"},
+                    "category": {"type": "string"},
+                    "description": {"type": "string"}
+                }
+            },
+            "source": "https://fakestoreapi.com/products",
+            "start": "2020-01-01T00:00:00.000Z",
+            "bookmark": "2020-01-01T00:00:00.000Z",
+            "replication_method": "full",
+            "replication_key": "none"
+        },
+        {
+            "stream": "users",
+            "schema": {
+                "properties": {
+                    "id": {"type": "integer"},
+                    "email": {"type": "string"},
+                    "username": {"type": "string"},
+                    "name": {
+                        "type": "object",
+                        "properties": {
+                            "firstname": {"type": "string"},
+                            "lastname": {"type": "string"}
+                        }
+                    },
+                    "address": {
+                        "type": "object",
+                        "properties": {
+                            "city": {"type": "string"},
+                            "street": {"type": "string"},
+                            "number": {"type": "integer"},
+                            "zipcode": {"type": "string"},
+                            "geolocation": {
+                                "type": "object",
+                                "properties": {
+                                    "lat": {"type": "string"},
+                                    "long": {"type": "string"}
+                                }
+                            }
+                        }
+                    },
+                    "phone": {"type": "string"}
+                }
+            },
+            "source": "https://fakestoreapi.com/users",
+            "start": "2020-01-01T00:00:00.000Z",
+            "bookmark": "2020-01-01T00:00:00.000Z",
+            "replication_method": "full",
+            "replication_key": "none"
+        },
+        {
+            "stream": "carts",
+            "schema": {
+                "properties": {
+                    "id": {"type": "integer"},
+                    "userId": {"type": "integer"},
+                    "date": {"type": "string", "format": "date-time"},
+                    "products": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "productId": {"type": "integer"},
+                                "quantity": {"type": "integer"}
+                            }
+                        }
+                    }
+                }
+            },
+            "source": "https://fakestoreapi.com/carts",
+            "start": "2020-01-01T00:00:00.000Z",
+            "bookmark": "2020-01-01T00:00:00.000Z",
+            "replication_method": "full",
+            "replication_key": "none"
+        }
+    ]
+}

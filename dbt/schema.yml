@@ -1,0 +1,19 @@
+version: 2
+
+source:
+  - name: raw_ecommerce
+    database: raw_database
+    schema: raw_ecommerce
+    tables:
+      - name: users
+      - name: carts
+      - name: products
+
+models:
+  - name: stg_user
+  - name: stg_cart
+  - name: stg_product
+  - name: prod_user
+  - name: prod_cart
+  - name: prod_product
+  - name: mart_cart
