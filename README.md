@@ -1,6 +1,6 @@
-# Tecovas Code Exercise for DE
+# Full Stack DE Exercise
 
-This repo contains both the data pipeline and the dbt models for the coding exercise provided. In the sections below I'll write a brief documentation about my thought processes during each section. Feel free to reach out to me with any questions.
+This repo contains both the data pipeline and the dbt models for a simple DE exercise. In the sections below I'll write a brief documentation about my thought processes.
 
 ### Data Pipeline Section
 
